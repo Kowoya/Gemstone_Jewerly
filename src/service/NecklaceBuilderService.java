@@ -17,7 +17,7 @@ public class NecklaceBuilderService {
      * @return нове намисто
      */
     public Necklace buildNecklace(int id, String name, double maxBudget, List<Gemstone> available, int maxCount){
-        if (maxBudget <= 0 || maxCount <= 0){
+        if (maxBudget <= 0 || maxCount <= 0) {
             throw new IllegalArgumentException("Budget and count must be positive");
         }
         List<Gemstone> sorted = new ArrayList<>(available);
