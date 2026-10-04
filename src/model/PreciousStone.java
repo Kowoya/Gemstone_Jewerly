@@ -12,7 +12,7 @@ public abstract class PreciousStone extends Gemstone{
     protected PreciousStone(String name, double weightCarats, double pricePerCarat, ClarityGrade clarity,
                             double transparencyIndex, GemColor color, Origin origin, String certificateNumber, CutType cutType){
         super(name, weightCarats, pricePerCarat, clarity, transparencyIndex, color, origin);
-        if (cutType == null){
+        if (cutType == null) {
             throw new IllegalArgumentException("Cut type must not be null");
         }
         this.certificateNumber = certificateNumber;

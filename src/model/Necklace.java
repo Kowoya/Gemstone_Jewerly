@@ -18,8 +18,8 @@ public class Necklace {
         this(id, name, new ArrayList<>());
     }
 
-    public Necklace(int id, String name, List<Gemstone> gemstones){
-        if (name == null || name.isBlank()){
+    public Necklace(int id, String name, List<Gemstone> gemstones) {
+        if (name == null || name.isBlank()) {
             throw new IllegalArgumentException("Name can't be empty");
         }
         if (gemstones == null) {

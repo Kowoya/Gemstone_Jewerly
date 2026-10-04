@@ -13,9 +13,9 @@ import enums.Origin;
 
 public class Sapphire extends PreciousStone{
     public Sapphire(String name, double weightCarats, double pricePerCarat, ClarityGrade clarity,
-                    double transparencyIndex, GemColor color, Origin origin, String certificateNumber, CutType cutType){
+                    double transparencyIndex, GemColor color, Origin origin, String certificateNumber, CutType cutType) {
         super(name, weightCarats, pricePerCarat, clarity, transparencyIndex, color, origin, certificateNumber, cutType);
-        if (color == GemColor.RED){
+        if (color == GemColor.RED) {
             throw new IllegalArgumentException("It's a ruby");
         }
     }

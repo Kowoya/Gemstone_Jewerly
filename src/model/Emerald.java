@@ -21,7 +21,7 @@ public class Emerald extends PreciousStone{
     }
 
     @Override
-    public double calculateValue(){
+    public double calculateValue() {
         double rawValue = getPricePerCarat() * getWeightCarats()
                 * clarityMultiplierFor(getClarity())
                 * cutTypeMultiplierFor(getCutType())

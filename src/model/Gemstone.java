@@ -15,7 +15,7 @@ public abstract class Gemstone {
 
     protected Gemstone(String name, double weightCarats, double pricePerCarat, ClarityGrade clarity,
                        double transparencyIndex, GemColor color, Origin origin) {
-        if (name == null || name.isBlank()){
+        if (name == null || name.isBlank()) {
             throw new IllegalArgumentException("Name can't be null");
         }
         if (weightCarats <= 0){

@@ -17,7 +17,7 @@ public class Topaz extends SemiPreciousStone{
     }
 
     @Override
-    public double calculateValue(){
+    public double calculateValue() {
         double rawValue = getPricePerCarat() * getWeightCarats()
                 * clarityMultiplierFor(getClarity())
                 * colorMultiplierFor(getColor());

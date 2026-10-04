@@ -12,7 +12,7 @@ import enums.Origin;
 
 public class Garnet extends SemiPreciousStone{
     public Garnet(String name, double weightCarats, double pricePerCarat, ClarityGrade clarity,
-                  double transparencyIndex, GemColor color, Origin origin, String treatmentType){
+                  double transparencyIndex, GemColor color, Origin origin, String treatmentType) {
         super(name, weightCarats, pricePerCarat, clarity, transparencyIndex, color, origin, treatmentType);
     }
 

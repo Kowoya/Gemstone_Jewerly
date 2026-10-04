@@ -18,9 +18,9 @@ public class Diamond extends PreciousStone{
     }
 
     @Override
-    public double calculateValue(){
+    public double calculateValue() {
         double weight;
-        if (getWeightCarats() >= 1){
+        if (getWeightCarats() >= 1) {
             weight = getWeightCarats() * getWeightCarats();
         } else {
             weight = getWeightCarats();

@@ -14,7 +14,7 @@ public abstract class SemiPreciousStone extends Gemstone{
         this.treatmentType = treatmentType;
     }
 
-    public String getTreatmentType(){
+    public String getTreatmentType() {
         return treatmentType;
     }
 }

@@ -33,8 +33,8 @@ public class Ruby extends PreciousStone{
      * Множник чистоти. Невеликі включення для рубінів звичні,
      * тому чистота впливає слабше, ніж для діаманта.
      */
-    private double clarityMultiplierFor(ClarityGrade grade){
-        return switch (grade){
+    private double clarityMultiplierFor(ClarityGrade grade) {
+        return switch (grade) {
             case FL, IF -> 1.4;
             case VVS1, VVS2 -> 1.25;
             case VS1, VS2 -> 1.1;
