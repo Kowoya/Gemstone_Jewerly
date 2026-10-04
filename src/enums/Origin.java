@@ -1,0 +1,25 @@
+package enums;
+
+public enum Origin {
+    AFGHANISTAN,
+    AUSTRALIA,
+    BOTSWANA,
+    BRAZIL,
+    CANADA,
+    COLOMBIA,
+    CZECH_REPUBLIC,
+    INDIA,
+    KASHMIR,
+    MADAGASCAR,
+    MOZAMBIQUE,
+    MYANMAR,
+    NAMIBIA,
+    NIGERIA,
+    SOUTH_AFRICA,
+    SRI_LANKA,
+    TANZANIA,
+    THAILAND,
+    URUGUAY,
+    ZAMBIA,
+    UNKNOWN
+}
