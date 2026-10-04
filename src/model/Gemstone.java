@@ -1,6 +1,8 @@
 package model;
 
 import enums.ClarityGrade;
+import enums.GemColor;
+import enums.Origin;
 
 public abstract class Gemstone {
     private final String name;
@@ -8,10 +10,26 @@ public abstract class Gemstone {
     private final double pricePerCarat;
     private final ClarityGrade clarity;
     private final double transparencyIndex;
-    private final String color;
-    private final String origin;
+    private final GemColor color;
+    private final Origin origin;
 
-    protected Gemstone(String name, double weightCarats, double pricePerCarat, ClarityGrade clarity, double transparencyIndex, String color, String origin) {
+    protected Gemstone(String name, double weightCarats, double pricePerCarat, ClarityGrade clarity,
+                       double transparencyIndex, GemColor color, Origin origin) {
+        if (name == null || name.isBlank()){
+            throw new IllegalArgumentException("Name can't be null");
+        }
+        if (weightCarats <= 0){
+            throw new IllegalArgumentException("Weight can't be less or equal to 0");
+        }
+        if (pricePerCarat <= 0){
+            throw new IllegalArgumentException("Price per Carat can't be less or equal to 0");
+        }
+        if (transparencyIndex <0 || transparencyIndex > 10){
+            throw new IllegalArgumentException("Transparency index have to be between 0 and 10");
+        }
+        if (color == null) {
+            throw new IllegalArgumentException("Color can't be null");
+        }
         this.name = name;
         this.weightCarats = weightCarats;
         this.pricePerCarat = pricePerCarat;
@@ -41,11 +59,11 @@ public abstract class Gemstone {
         return transparencyIndex;
     }
 
-    public String getColor(){
+    public GemColor getColor(){
         return color;
     }
 
-    public String getOrigin(){
+    public Origin getOrigin(){
         return origin;
     }
 
