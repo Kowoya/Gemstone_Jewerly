@@ -5,6 +5,7 @@ import enums.GemColor;
 import enums.Origin;
 
 public abstract class Gemstone {
+    private int id;
     private final String name;
     private final double weightCarats;
     private final double pricePerCarat;
@@ -30,6 +31,12 @@ public abstract class Gemstone {
         if (color == null) {
             throw new IllegalArgumentException("Color can't be null");
         }
+        if (clarity == null) {
+            throw new IllegalArgumentException("Clarity can't be null");
+        }
+        if (origin == null) {
+            throw new IllegalArgumentException("Origin can't be null");
+        }
         this.name = name;
         this.weightCarats = weightCarats;
         this.pricePerCarat = pricePerCarat;
@@ -37,6 +44,14 @@ public abstract class Gemstone {
         this.transparencyIndex = transparencyIndex;
         this.color = color;
         this.origin = origin;
+    }
+    public int getId() { return id; }
+
+    public void setId(int id) {
+        if (id <= 0) {
+            throw new IllegalArgumentException("Id must be positive");
+        }
+        this.id = id;
     }
 
     public String getName(){

@@ -11,6 +11,9 @@ public abstract class SemiPreciousStone extends Gemstone{
     protected SemiPreciousStone(String name, double weightCarats, double pricePerCarat, ClarityGrade clarity,
                                 double transparencyIndex, GemColor color, Origin origin, String treatmentType){
         super(name, weightCarats, pricePerCarat, clarity, transparencyIndex, color, origin);
+        if (treatmentType == null || treatmentType.isBlank()) {
+            throw new IllegalArgumentException("Treatment type can't be empty");
+        }
         this.treatmentType = treatmentType;
     }
 
